@@ -50,6 +50,7 @@ img[data-action=lumos] {
 }
 #lumos-image {
   overflow: hidden;
+  object-fit: contain;
   max-width: 100%;
   width: auto;
   max-height: 100%;
