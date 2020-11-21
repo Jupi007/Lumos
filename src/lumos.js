@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         isVisible() && (lumosContainer.classList.add("hidden"), setTimeout(() => {
             lumosContainer.classList.remove("visible");
             lumosImage.attributes.src.value = "";
-            lumosCaption.innerHTML = "";
+            if (lumosCaption !== null) {
+                lumosCaption.innerHTML = "";
+            }
         }, animationDuration));
     }
 
@@ -24,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         image.addEventListener("click", () => {
             lumosImage.attributes.src.value = void 0 === image.attributes["data-lumos-src"] ? image.attributes.src.value : image.attributes["data-lumos-src"].value;
             lumosImage.attributes.alt.value = image.attributes.alt.value;
-            lumosCaption.innerHTML = image.attributes["data-lumos-caption"].value;
+            if (lumosCaption !== null) {
+                lumosCaption.innerHTML = image.attributes["data-lumos-caption"].value;
+            }
             isVisible() || (lumosContainer.classList.remove("hidden"), lumosContainer.classList.add("visible"));
         });
     });
