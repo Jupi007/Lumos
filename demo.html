@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lumos Demo</title>
+
+        <link rel="stylesheet" href="csstart.min.css">
+        <link rel="stylesheet" href="src/lumos.css">
+
+        <style>
+            body {
+                position: relative;
+                z-index: -1;
+            }
+            main {
+                max-width: 1000px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="p">
+            <h1 class="txt-center">Lumos - Demo</h1>
+            <div class="Grid Grid-s-2 Grid-l-3 has-gutter mt-large">
+                <div class="d-flex">
+                    <img src="images/mars.small.jpg"
+                         alt="Portrait de la planète Mars"
+
+                         data-action="lumos"
+                         data-lumos-src="images/mars.jpg"
+                         data-lumos-caption="Portrait de la planète Mars – © NASA/JPL/USGS"
+
+                         class="m-auto"/>
+                </div>
+                <div class="d-flex">
+                    <img src="images/mercure.small.jpg"
+                         alt="Portrait de la planète Mercure"
+
+                         data-action="lumos"
+                         data-lumos-src="images/mercure.jpg"
+                         data-lumos-caption="Portrait de la planète Mercure – © NASA/Johns Hopkins University/Carnegie Institution of Washington"
+
+                         class="m-auto"/>
+                </div>
+                <div class="d-flex">
+                    <img src="images/nebuleuse-carene.small.jpg"
+                         alt="La nébuleuse de la Carène"
+
+                         data-action="lumos"
+                         data-lumos-src="images/nebuleuse-carene.jpg"
+                         data-lumos-caption="La nébuleuse de la Carène, véritable pépinière d’étoile, prise par le télescope spatial Hubble – © NASA"
+
+                         class="m-auto"/>
+                </div>
+                <div class="d-flex">
+                    <img src="images/soleil.small.jpg"
+                         alt="Éruptions solaires à la surface du soleil"
+
+                         data-action="lumos"
+                         data-lumos-src="images/soleil.jpg"
+                         data-lumos-caption="Éruptions solaires à la surface du soleil – © NASA"
+
+                         class="m-auto"/>
+                </div>
+                <div class="d-flex">
+                    <img src="images/tache-rouge.small.jpg"
+                         alt="La grande tâche rouge de Jupiter"
+
+                         data-action="lumos"
+                         data-lumos-src="images/tache-rouge.jpg"
+                         data-lumos-caption="La grande tâche rouge de Jupiter prise par Voyager 1 – © NASA/JPL"
+
+                         class="m-auto"/>
+                </div>
+                <div class="d-flex">
+                    <img src="images/terre.small.jpg"
+                         alt="Photo très détaillée de la Terre"
+
+                         data-action="lumos"
+                         data-lumos-src="images/terre.jpg"
+                         data-lumos-caption="Photo très détaillée de la Terre – © NASA"
+
+                         class="m-auto"/>
+                </div>
+            </div>
+        </main>
+
+        <template id="lumos-template">
+            <div id="lumos-container">
+                <figure id="lumos-figure">
+                    <img src="" alt="" id="lumos-image">
+                    <figcaption id="lumos-caption"></figcaption>
+                </figure>
+            </div>
+        </template>
+
+        <script src="src/lumos.js"></script>
+    </body>
+</html>
