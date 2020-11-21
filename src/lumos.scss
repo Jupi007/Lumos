@@ -1,0 +1,117 @@
+:root {
+    --lumos-background: rgba(.8, .8, .8, .7);
+    --lumos-padding: 2rem;
+    --lumos-child-margin-top: 1rem;
+    --lumos-transition-duration: 250ms;
+}
+
+img[data-action=lumos] {
+    cursor: zoom-in;
+}
+
+#lumos {
+    &-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
+        padding: var(--lumos-padding);
+
+        cursor: zoom-out;
+        user-select: none;
+        transition: all var(--lumos-transition-duration) ease-in-out;
+        transform: scale(0);
+        will-change: auto;
+
+        opacity: 0;
+        background: var(--lumos-background);
+
+        &.visible {
+            animation-name: animate-in;
+            animation-duration: var(--lumos-transition-duration);
+
+            animation-fill-mode: forwards;
+            z-index: 999;
+        }
+        &.hidden {
+            animation: animate-out;
+            animation-duration: var(--lumos-transition-duration);
+
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-figure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        margin: 0;
+    }
+
+    &-image {
+        overflow: hidden;
+
+        max-width: 100%;
+        width: auto;
+        max-height: 100%;
+        height: auto;
+    }
+
+    &-caption {
+        margin-top: var(--lumos-child-margin-top);
+
+        text-align: center;
+
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+
+    &-link {
+        margin-top: var(--lumos-child-margin-top);
+    }
+}
+
+
+
+@keyframes animate-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    1%{
+        transform: scale(.9);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animate-out {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    99% {
+        transform: scale(.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+
+        opacity: 0;
+    }
+}
