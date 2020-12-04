@@ -16,7 +16,7 @@ img[data-action=lumos] {
         left: 0;
         z-index: 1;
 
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
 
@@ -34,16 +34,18 @@ img[data-action=lumos] {
         background: var(--lumos-background);
 
         &.visible {
+            display: flex;
+            z-index: 999;
+
             animation-name: animate-in;
             animation-duration: var(--lumos-transition-duration);
-
             animation-fill-mode: forwards;
-            z-index: 999;
         }
         &.hidden {
+            display: flex;
+
             animation: animate-out;
             animation-duration: var(--lumos-transition-duration);
-
             animation-fill-mode: forwards;
         }
     }

@@ -14,7 +14,7 @@ img[data-action=lumos] {
   top: 0;
   left: 0;
   z-index: 1;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -29,12 +29,14 @@ img[data-action=lumos] {
   background: var(--lumos-background);
 }
 #lumos-container.visible {
+  display: flex;
+  z-index: 999;
   animation-name: animate-in;
   animation-duration: var(--lumos-transition-duration);
   animation-fill-mode: forwards;
-  z-index: 999;
 }
 #lumos-container.hidden {
+  display: flex;
   animation: animate-out;
   animation-duration: var(--lumos-transition-duration);
   animation-fill-mode: forwards;

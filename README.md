@@ -4,7 +4,7 @@
 
 ## Usage
 
-Firstly include the script and the stylesheet (it is recommended to customize it) on your HTML page:
+Firstly include the script and the stylesheet (it is recommended to customize them, you can use the .scss and .ts file) on your HTML page:
 
 ```html
 <!DOCTYPE html>
