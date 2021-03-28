@@ -1,6 +1,6 @@
 <h1 align="center">Lumos</h1>
 
-<p align="center">A lightweight lightbox in pure javscript with css animation.</p>
+<p align="center">An ultra-lightweight lightbox in pure javscript with css animation.</p>
 
 ## Usage
 
